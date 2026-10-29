@@ -4,6 +4,8 @@
 
 [![npm](https://img.shields.io/npm/v/agent-task-compiler)](https://www.npmjs.com/package/agent-task-compiler)
 [![license](https://img.shields.io/npm/l/agent-task-compiler)](./LICENSE)
+[![CI](https://github.com/sofian172/agent-task-compiler/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sofian172/agent-task-compiler/actions/workflows/ci.yml)
+[![GitHub](https://img.shields.io/badge/source-github-181717?logo=github)](https://github.com/sofian172/agent-task-compiler)
 
 ## Why?
 

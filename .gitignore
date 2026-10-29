@@ -4,3 +4,7 @@ dist/
 .DS_Store
 .env
 coverage/
+
+# Real npm auth tokens must never be committed — use .npmrc.template instead.
+.npmrc
+!.npmrc.template

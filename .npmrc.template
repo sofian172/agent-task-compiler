@@ -1,0 +1,13 @@
+# Copy this file to `.npmrc` (or your home `~/.npmrc`) and replace
+# YOUR_NPM_TOKEN with a real automation token from
+# https://www.npmjs.com/settings/~/tokens (scope: "Automation" or "Read and write").
+#
+#   cp .npmrc.template .npmrc
+#   # then edit and replace YOUR_NPM_TOKEN
+#   npm publish --access public
+#
+# DO NOT commit your real .npmrc — it is gitignored.
+
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+registry=https://registry.npmjs.org/
+access=public
