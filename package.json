@@ -1,0 +1,36 @@
+{
+  "name": "agent-task-compiler",
+  "version": "0.1.0",
+  "description": "Compile natural-language intent into a verifiable, executable agent contract. Ships as a library, CLI, and MCP server.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./schema": "./dist/schema/contract.schema.json"
+  },
+  "bin": {
+    "agent-task-compiler": "./dist/cli.js",
+    "agent-task-compiler-mcp": "./dist/mcp-server.js"
+  },
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "scripts": {
+    "build": "tsc && node scripts/copy-schema.mjs",
+    "test": "npm run build && node --test dist/**/*.test.js",
+    "prepublishOnly": "npm run build && node --test dist/**/*.test.js",
+    "mcp": "node dist/mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["ai", "agents", "llm", "compiler", "contract", "mcp", "orchestration", "llm-tools"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/sofian172/agent-task-compiler.git" }
+}
