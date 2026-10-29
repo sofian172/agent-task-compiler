@@ -16,8 +16,8 @@
   "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
   "scripts": {
     "build": "tsc && node scripts/copy-schema.mjs",
-    "test": "npm run build && node --test dist/**/*.test.js",
-    "prepublishOnly": "npm run build && node --test dist/**/*.test.js",
+    "test": "npm run build && node --test dist/compiler.test.js dist/validator.test.js",
+    "prepublishOnly": "npm run build && node --test dist/compiler.test.js dist/validator.test.js",
     "mcp": "node dist/mcp-server.js"
   },
   "dependencies": {
